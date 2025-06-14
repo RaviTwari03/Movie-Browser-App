@@ -131,7 +131,7 @@ export default function HomeScreen() {
           onChangeText={handleSearch}
           value={searchQuery}
           style={[styles.searchBar, { backgroundColor: paperTheme.colors.surface }]}
-          inputStyle={[styles.searchInput, { color: paperTheme.colors.text }]}
+          inputStyle={[styles.searchInput, { color: paperTheme.colors.onSurface }]}
           iconColor={paperTheme.colors.primary}
           placeholderTextColor={paperTheme.colors.secondary}
         />
@@ -164,7 +164,7 @@ export default function HomeScreen() {
               style={styles.historyItem}
               onPress={() => handleHistoryItemPress(item)}
             >
-              <Text style={{ color: paperTheme.colors.text }}>{item}</Text>
+              <Text style={{ color: paperTheme.colors.onSurface }}>{item}</Text>
               <IconButton
                 icon="close"
                 size={20}
@@ -176,7 +176,7 @@ export default function HomeScreen() {
         </View>
       )}
 
-      <Text variant="titleLarge" style={[styles.sectionTitle, { color: paperTheme.colors.text }]}>
+      <Text variant="titleLarge" style={[styles.sectionTitle, { color: paperTheme.colors.onSurface }]}>
         {searchQuery ? 'Search Results' : 'Popular Movies'}
       </Text>
 
