@@ -45,7 +45,7 @@ export default function FavoritesScreen() {
             isFavorite={isFavorite(item.id)}
           />
         )}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => `movie-${item.id}`}
         numColumns={2}
         contentContainerStyle={styles.list}
       />

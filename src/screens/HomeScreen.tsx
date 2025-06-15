@@ -190,7 +190,7 @@ export default function HomeScreen() {
             isFavorite={isFavorite(item.id)}
           />
         )}
-        keyExtractor={(item) => `movie-${item.id}-${Date.now()}`}
+        keyExtractor={(item) => `movie-${item.id}`}
         numColumns={2}
         contentContainerStyle={styles.list}
         onEndReached={handleLoadMore}
