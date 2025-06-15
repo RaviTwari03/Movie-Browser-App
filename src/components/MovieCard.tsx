@@ -50,48 +50,48 @@ export const MovieCard: React.FC<MovieCardProps> = ({
 
   return (
     <Animated.View style={cardStyle}>
-      <TouchableOpacity
-        onPress={() => onPress(movie)}
+    <TouchableOpacity
+      onPress={() => onPress(movie)}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
         activeOpacity={0.9}
-      >
-        <Image
-          source={{
-            uri: `${API_CONFIG.imageBaseURL}/${API_CONFIG.posterSize}${movie.poster_path}`,
-          }}
-          style={styles.poster}
-          resizeMode="cover"
-        />
-        <View style={styles.content}>
-          <View style={styles.titleContainer}>
-            <Text
-              numberOfLines={2}
-              style={[styles.title, { color: paperTheme.colors.text }]}
-            >
-              {movie.title}
-            </Text>
-            <IconButton
-              icon={isFavorite ? 'heart' : 'heart-outline'}
-              size={20}
-              onPress={onFavoritePress}
-              style={styles.favoriteButton}
-              iconColor={isFavorite ? '#ff6b6b' : paperTheme.colors.primary}
-            />
-          </View>
-          <View style={styles.ratingContainer}>
-            <IconButton
-              icon="star"
-              size={16}
-              iconColor="#ffd700"
-              style={styles.starIcon}
-            />
-            <Text style={[styles.rating, { color: paperTheme.colors.text }]}>
-              {movie.vote_average.toFixed(1)}
-            </Text>
-          </View>
+    >
+      <Image
+        source={{
+          uri: `${API_CONFIG.imageBaseURL}/${API_CONFIG.posterSize}${movie.poster_path}`,
+        }}
+        style={styles.poster}
+        resizeMode="cover"
+      />
+      <View style={styles.content}>
+        <View style={styles.titleContainer}>
+          <Text
+            numberOfLines={2}
+            style={[styles.title, { color: paperTheme.colors.text }]}
+          >
+            {movie.title}
+          </Text>
+          <IconButton
+            icon={isFavorite ? 'heart' : 'heart-outline'}
+            size={20}
+            onPress={onFavoritePress}
+            style={styles.favoriteButton}
+            iconColor={isFavorite ? '#ff6b6b' : paperTheme.colors.primary}
+          />
         </View>
-      </TouchableOpacity>
+        <View style={styles.ratingContainer}>
+          <IconButton
+            icon="star"
+            size={16}
+            iconColor="#ffd700"
+            style={styles.starIcon}
+          />
+          <Text style={[styles.rating, { color: paperTheme.colors.text }]}>
+            {movie.vote_average.toFixed(1)}
+          </Text>
+        </View>
+      </View>
+    </TouchableOpacity>
     </Animated.View>
   );
 };

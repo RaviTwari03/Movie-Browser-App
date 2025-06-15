@@ -9,21 +9,29 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#121212"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "userInterfaceStyle": "automatic"
+      "bundleIdentifier": "com.ravitwari03.moviebrowser"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#121212"
+        "backgroundColor": "#ffffff"
       },
-      "userInterfaceStyle": "automatic"
+      "package": "com.ravitwari03.moviebrowser"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9d7e43ea-ce6e-404b-ada7-8072ed7f81f8"
+      }
     }
   }
-} 
+}

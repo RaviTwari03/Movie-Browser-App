@@ -77,17 +77,17 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Load saved theme preference
   useEffect(() => {
     const initializeTheme = async () => {
-      try {
-        const savedTheme = await AsyncStorage.getItem(STORAGE_KEYS.theme);
-        if (savedTheme) {
-          setTheme(savedTheme as Theme);
-        }
-        setIsInitialized(true);
-      } catch (error) {
-        console.error('Error loading theme:', error);
-        setIsInitialized(true);
+    try {
+      const savedTheme = await AsyncStorage.getItem(STORAGE_KEYS.theme);
+      if (savedTheme) {
+        setTheme(savedTheme as Theme);
       }
-    };
+        setIsInitialized(true);
+    } catch (error) {
+      console.error('Error loading theme:', error);
+        setIsInitialized(true);
+    }
+  };
     initializeTheme();
   }, []);
 

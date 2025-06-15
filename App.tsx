@@ -28,12 +28,12 @@ const Main = () => {
 
   return (
     <Animated.View style={{ flex: 1, opacity: fadeAnim }}>
-      <PaperProvider theme={paperTheme}>
-        <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
-        <NavigationContainer theme={navigationTheme}>
-          <AppNavigator />
-        </NavigationContainer>
-      </PaperProvider>
+    <PaperProvider theme={paperTheme}>
+      <StatusBar barStyle={isDarkMode ? "light-content" : "dark-content"} />
+      <NavigationContainer theme={navigationTheme}>
+        <AppNavigator />
+      </NavigationContainer>
+    </PaperProvider>
     </Animated.View>
   );
 };
